@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Olcademy Internship task</title>
+   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+   <link rel="stylesheet" href="style.css" /> 
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Login / Sign Up Page </h3>
+    <input type="text" placeholder="Name" id="name_field" />
+    <input type="email" placeholder="Email" id="email_field" />
+    <input type="password" placeholder="Password" id="password_field" />
+    <input type="date" placeholder="DOB" id="dob_field" />
+
+    <button onclick="createUser()">Sign Up</button>
+    <button onclick="login()">Login to Account</button>
+    
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase Web login. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+<!-- chnage this to your app config -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyAPxCGg6jb5oYMrAkCImYOq2o2xK7a5xwY",
+      authDomain: "fir-sign-up-a2f56.firebaseapp.com",
+      databaseURL: "https://fir-sign-up-a2f56.firebaseio.com",
+      projectId: "fir-sign-up-a2f56",
+      storageBucket: "fir-sign-up-a2f56.appspot.com",
+      messagingSenderId: "616078507930",
+      appId: "1:616078507930:web:89d1f955ddf05cb184c423"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
